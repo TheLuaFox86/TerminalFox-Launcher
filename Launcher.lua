@@ -1,7 +1,7 @@
 
 repo = "https://raw.githubusercontent.com/TheLuaFox86/TerminalFox-Launcher/main/"
 TLFR = "https://raw.githubusercontent.com/TheLuaFox86/TerminalFox-Roblox/main/"
-wget = function(url)
+_G.wget = function(url)
   return game:GetService("HttpService"):GetAsync(url, true)
 end
 local player = owner or game.Players.LocalPlayer
