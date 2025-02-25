@@ -6,6 +6,6 @@ _G.wget = function(url)
 end
 local player = owner or game.Players.LocalPlayer
 local gui = {}
-gui.body = Instance.new("ScreenGui")
+gui.body = Instance.New("ScreenGui")
 gui.body.Parent = player.PlayerGui
 loadstring(wget(TLFR .. "TerminalFox.lua"), true)(player, gui)
