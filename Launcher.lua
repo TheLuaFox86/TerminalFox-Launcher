@@ -10,4 +10,4 @@ gui.body = Instance.new("ScreenGui")
 gui.body.Parent = player.PlayerGui
 a = wget(TLFR .. "TerminalFox.lua")
 print(a)
-loadstring()(player, gui, repo, TLFR, wget)
+loadstring(a)(player, gui, repo, TLFR, wget)
