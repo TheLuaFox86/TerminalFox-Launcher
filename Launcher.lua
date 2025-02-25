@@ -8,4 +8,6 @@ local player = owner or game.Players.LocalPlayer
 local gui = {}
 gui.body = Instance.new("ScreenGui")
 gui.body.Parent = player.PlayerGui
-loadstring(wget(TLFR .. "TerminalFox.lua"))(player, gui, repo, TLFR, wget)
+a = wget(TLFR .. "TerminalFox.lua")
+print(a)
+loadstring()(player, gui, repo, TLFR, wget)
