@@ -1,8 +1,8 @@
 local luaSandboxMode = false
-if owner then
+--if owner then
   _G = shared
   luaSandboxMode = true
-end
+--end
 local player
 do
   if luaSandboxMode then
