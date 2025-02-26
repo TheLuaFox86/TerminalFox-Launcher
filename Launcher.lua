@@ -17,9 +17,8 @@ _G.TLFR = "https://raw.githubusercontent.com/TheLuaFox86/TerminalFox-Roblox/main
 _G.wget = function(url)
   return game:GetService("HttpService"):GetAsync(url, true)
 end
-local gui = {}
-gui.body = Instance.new("ScreenGui")
-gui.body.Parent = player.PlayerGui
+gui = Instance.new("ScreenGui")
+gui.Parent = player.PlayerGui
 a = wget(TLFR .. "TerminalFox.lua")
 print(a)
 loadstring(a)(player, gui)
