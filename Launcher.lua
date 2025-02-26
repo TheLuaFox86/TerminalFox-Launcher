@@ -15,11 +15,11 @@ print(_G.LSM, _G)
 repo = "https://raw.githubusercontent.com/TheLuaFox86/TerminalFox-Launcher/main/"
 TLFR = "https://raw.githubusercontent.com/TheLuaFox86/TerminalFox-Roblox/main/"
 wget = function(url)
-  return game:GetService("HttpService"):GetAsync(url, true)
+  return game:GetService("HttpService"):GetAsync(url)
 end
 gui = Instance.new("ScreenGui")
 print(gui)
 gui.Parent = player.PlayerGui
-a = wget(TLFR .. "TerminalFox.lua")
+a = wget("https://raw.githubusercontent.com/TheLuaFox86/TerminalFox-Roblox/main/" .. "TerminalFox.lua")
 print(a)
 loadstring(a)(player, gui, wget, TLFR, repo)
