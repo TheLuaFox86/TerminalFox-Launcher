@@ -21,7 +21,7 @@ end
 gui = Instance.new("ScreenGui")
 print(gui)
 gui.Parent = player.PlayerGui
-a = wget(TLFR .. "TerminalFox.lua")
+a = wget(_G.TLFR .. "TerminalFox.lua")
 print(a)
 loadstring(a)(player, gui)
 if luaSandboxMode then
