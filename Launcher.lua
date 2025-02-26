@@ -1,6 +1,6 @@
 local luaSandboxMode = false
 if _G == {} then
-  _G = Shared
+  _G = shared
   luaSandboxMode = true
 end
 local player
