@@ -1,5 +1,5 @@
 local luaSandboxMode = false
-if not _G then
+if _G == {} then
   _G = Shared
   luaSandboxMode = true
 end
