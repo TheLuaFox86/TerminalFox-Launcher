@@ -1,5 +1,5 @@
 local luaSandboxMode = false
-if not _G then
+if owner then
   _G = shared
   luaSandboxMode = true
 end
