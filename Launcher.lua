@@ -12,7 +12,7 @@ do
   end
 end
 _G.LSM = luaSandboxMode
-print(LSM, _G)
+print(_G.LSM, _G)
 _G.repo = "https://raw.githubusercontent.com/TheLuaFox86/TerminalFox-Launcher/main/"
 _G.TLFR = "https://raw.githubusercontent.com/TheLuaFox86/TerminalFox-Roblox/main/"
 _G.wget = function(url)
