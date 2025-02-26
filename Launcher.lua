@@ -1,5 +1,5 @@
 local luaSandboxMode = false
-if _G == {} then
+if not _G then
   _G = shared
   luaSandboxMode = true
 end
@@ -19,6 +19,7 @@ _G.wget = function(url)
   return game:GetService("HttpService"):GetAsync(url, true)
 end
 gui = Instance.new("ScreenGui")
+print(gui)
 gui.Parent = player.PlayerGui
 a = wget(TLFR .. "TerminalFox.lua")
 print(a)
