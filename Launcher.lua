@@ -1,6 +1,5 @@
 local luaSandboxMode = false
 --if owner then
-  _G = shared
   luaSandboxMode = true
 --end
 local player
@@ -11,19 +10,16 @@ do
     player = game.Players.LocalPlayer
   end
 end
-_G.LSM = luaSandboxMode
+LSM = luaSandboxMode
 print(_G.LSM, _G)
-_G.repo = "https://raw.githubusercontent.com/TheLuaFox86/TerminalFox-Launcher/main/"
-_G.TLFR = "https://raw.githubusercontent.com/TheLuaFox86/TerminalFox-Roblox/main/"
-_G.wget = function(url)
+repo = "https://raw.githubusercontent.com/TheLuaFox86/TerminalFox-Launcher/main/"
+TLFR = "https://raw.githubusercontent.com/TheLuaFox86/TerminalFox-Roblox/main/"
+wget = function(url)
   return game:GetService("HttpService"):GetAsync(url, true)
 end
 gui = Instance.new("ScreenGui")
 print(gui)
 gui.Parent = player.PlayerGui
-a = wget(_G.TLFR .. "TerminalFox.lua")
+a = wget(TLFR .. "TerminalFox.lua")
 print(a)
-loadstring(a)(player, gui)
-if luaSandboxMode then
-  shared = _G
-end
+loadstring(a)(player, gui, wget, TLFR, repo)
